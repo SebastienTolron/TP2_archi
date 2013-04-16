@@ -12,13 +12,13 @@ public class AgedBrie extends Item {
 	
 	@Override
 	public void updateQuality() {
-		if (this.getQuality() < 50){
-			this.setQuality(this.getQuality() +1 );
+		if (this.quality < 50){
+			this.quality++;
 		}
-		this.setSellIn(this.getSellIn() - 1 );
+		this.sellIn--;
 		
 		if (testSellInQuality(0,50))
-				this.setQuality(this.getQuality()+1);
+			this.quality++;
 		
 	}
 
@@ -26,7 +26,7 @@ public class AgedBrie extends Item {
 	@Override
 	public boolean testSellInQuality(int sellIn, int quality) {
 		
-		return this.getSellIn() < sellIn && this.getQuality()<quality;
+		return this.sellIn < sellIn && this.quality<quality;
 	}
 	
 }

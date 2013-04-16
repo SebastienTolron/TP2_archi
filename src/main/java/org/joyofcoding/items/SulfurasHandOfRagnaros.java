@@ -15,7 +15,7 @@ public class SulfurasHandOfRagnaros extends Item {
 
 	@Override
 	public boolean testSellInQuality(int sellIn, int quality) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 

@@ -10,16 +10,22 @@ public class ConjuredManaCake extends Item {
 	@Override
 	public void updateQuality() {
 		
-		if (this.getQuality() > 0) {
-			this.setQuality(this.getQuality() - 1);
+		if (this.quality > 0) {
+			this.quality--;
 		}
-		this.setSellIn(this.getSellIn() - 1);
+		this.sellIn--;
 		
-		if (this.getSellIn() < 0 && this.getQuality() > 0)
+		if (testSellInQuality(0,0))
 		{
-			this.setQuality(	this.getQuality() - 1);
+			this.quality--;
 		}
 	
+	}
+
+	@Override
+	public boolean testSellInQuality(int sellIn, int quality) {
+	
+		return this.sellIn < sellIn && this.quality > quality ;
 	}
 
 }

@@ -5,26 +5,26 @@ public class BackstagePassesToTafkal80etcConcert extends Item {
 	public BackstagePassesToTafkal80etcConcert( int sellIn,
 			int quality) {
 		super("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
-		// TODO Auto-generated constructor stub
+
 	}
 
 	@Override
 	public void updateQuality() {
 		
-		if (this.getQuality() < 50) {
-			this.setQuality(this.getQuality() +1 );
+		if (this.quality < 50) {
+			   this.quality++;
 			
 			if (testSellInQuality(11,50)) {
-				this.setQuality(this.getQuality() + 1);
+				this.quality++;
 			}
 			if (testSellInQuality(6,50)) {
-				this.setQuality(this.getQuality() + 1);
+				this.quality++;
 			}
 		}
-		this.setSellIn(this.getSellIn() - 1 );
+		this.sellIn--;
 		
-		if (this.getSellIn() <0 )  {
-			this.setQuality(0);
+		if (this.sellIn <0 )  {
+			this.quality = 0 ;
 		}
 		
 	}
@@ -32,7 +32,7 @@ public class BackstagePassesToTafkal80etcConcert extends Item {
 	@Override
 	public boolean testSellInQuality(int sellIn, int quality) {
 	
-		return this.getSellIn() < sellIn && this.getQuality() < quality ;
+		return this.sellIn < sellIn && this.quality < quality ;
 	}
 
 
