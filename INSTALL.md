@@ -25,6 +25,14 @@
 * Executer les commandes sql suivantes :
 
 
+		INSERT INTO `fos_group` (`id`, `name`, `roles`) VALUES
+		(1, 'Admin', 'a:3:{i:0;s:17:"ROLE_SONATA_ADMIN";i:1;s:23:"ROLE_SONATA_SUPER_ADMIN";i:2;s:16:"ROLE_SUPER_ADMIN";}'),
+		(2, 'Responsable des tournois', 'a:5:{i:0;s:31:"ROLE_SONATA_ADMIN_TOURNOI_ADMIN";i:1;s:33:"ROLE_SONATA_ADMIN_CATEGORIE_ADMIN";i:2;s:28:"ROLE_SONATA_ADMIN_CLUB_ADMIN";i:3;s:34:"ROLE_SONATA_ADMIN_EQUIPECLUB_ADMIN";i:4;s:17:"ROLE_SONATA_ADMIN";}'),
+		(3, 'Parents dirigeant', 'a:2:{i:0;s:9:"ROLE_USER";i:1;s:34:"ROLE_SONATA_ADMIN_NEWSEQUIPE_ADMIN";}'),
+		(4, 'Licencié', 'a:2:{i:0;s:34:"ROLE_SONATA_ADMIN_NEWSEQUIPE_ADMIN";i:1;s:9:"ROLE_USER";}');
+		
+		
+
 * Pour initialisez les droits sur un objet ( Comme une inscription pour le responsable de tournoi par exemple ) il faut :
 
 	* Créer un objet 
@@ -33,11 +41,7 @@
  les droits seront alors initialiser pour tous les objets de ce type.
 
 
-		INSERT INTO `fos_group` (`id`, `name`, `roles`) VALUES
-		(1, 'Admin', 'a:3:{i:0;s:17:"ROLE_SONATA_ADMIN";i:1;s:23:"ROLE_SONATA_SUPER_ADMIN";i:2;s:16:"ROLE_SUPER_ADMIN";}'),
-		(2, 'Responsable des tournois', 'a:5:{i:0;s:31:"ROLE_SONATA_ADMIN_TOURNOI_ADMIN";i:1;s:33:"ROLE_SONATA_ADMIN_CATEGORIE_ADMIN";i:2;s:28:"ROLE_SONATA_ADMIN_CLUB_ADMIN";i:3;s:34:"ROLE_SONATA_ADMIN_EQUIPECLUB_ADMIN";i:4;s:17:"ROLE_SONATA_ADMIN";}'),
-		(3, 'Parents dirigeant', 'a:2:{i:0;s:9:"ROLE_USER";i:1;s:34:"ROLE_SONATA_ADMIN_NEWSEQUIPE_ADMIN";}'),
-		(4, 'Licencié', 'a:2:{i:0;s:34:"ROLE_SONATA_ADMIN_NEWSEQUIPE_ADMIN";i:1;s:9:"ROLE_USER";}');
+
 
 
 
